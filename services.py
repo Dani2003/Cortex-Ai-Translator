@@ -4,7 +4,13 @@ import asyncio
 import json
 from groq import AsyncGroq
 from schemas import TranslationRequest, AuditReportResponse, SingleLanguageOutput
+from dotenv import load_dotenv
 
+load_dotenv()
+
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    raise ValueError("GROQ_API_KEY is missing from environment or .env file.")
 client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
 # Preferred order of production models
