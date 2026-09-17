@@ -9,7 +9,7 @@ description = "Dual-pipeline AI translation platform with consensus evaluation a
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "fastapi>=0.110.0",
+    "fastapi[standard]>=0.110.0",
     "uvicorn>=0.28.0",
     "groq>=0.4.0",
     "python-dotenv>=1.0.1",
